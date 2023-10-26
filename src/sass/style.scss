@@ -16,7 +16,7 @@ html {
 body {
 	font-family: 'Montserrat', sans-serif;
 	font-size: 1.6rem;
-    color: $logo-color;
+	color: $logo-color;
 	background-color: $body-color;
 }
 
@@ -44,7 +44,7 @@ img {
 	text-align: center;
 	text-transform: uppercase;
 	font-weight: 400;
-    color: $logo-color;
+	color: $logo-color;
 }
 
 // NAV
@@ -64,7 +64,7 @@ img {
 	}
 	img {
 		width: 100px;
-        border: 1px solid $logo-color;
+		border: 1px solid $logo-color;
 		border-radius: 8px;
 	}
 }
@@ -147,7 +147,13 @@ img {
 	z-index: 0;
 	&__header {
 		height: 60vh;
-		background-image: url('/dist/img/hero-img.jpg');
+		background-image: url('/dist/img/hero-img-christening-small.jpg');
+	}
+	&__title {
+		margin-top: 4em;
+		height: 35vh;
+		background-image: url('/dist/img/love-pixabay-small.jpg');
+		background-attachment: fixed;
 	}
 	&__shadow {
 		position: absolute;
@@ -180,7 +186,8 @@ img {
 	justify-content: space-between;
 	margin-bottom: 1.5em;
 	&__img {
-        padding: 0 1.5em;
+		padding: 0 1.5em;
+		// width: 30vw;
 	}
 	&__text {
 		padding: 2em 1.5em;
@@ -189,6 +196,87 @@ img {
 		}
 		p {
 			line-height: 3rem;
+		}
+	}
+}
+
+// OFFERS
+.offers {
+	text-align: center;
+	padding-bottom: 4em;
+	a {
+		font-size: 2rem;
+		transition: color 0.3s;
+		&:hover {
+			color: $primary-check-btn;
+		}
+	}
+}
+
+.offers-cards {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	margin: 3em 1em;
+}
+
+.offer-card {
+	margin: 1em 0.5em;
+	max-width: 350px;
+	// height: 700px;
+	padding: 2em 1em;
+	border: 1px;
+	box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
+	border-radius: 8px;
+	& h3 {
+		font-size: 2.4rem;
+		font-weight: normal;
+	}
+	img {
+		margin: 2em 0;
+		width: 100%;
+		background-position: center;
+		background-size: cover;
+		height: 400px;
+	}
+	// & .price {
+	// 	padding: 0.5em;
+	// 	font-size: 3.7rem;
+	// 	font-weight: bold;
+	// }
+	&__options {
+		line-height: 3rem;
+		list-style: none;
+		font-size: 1.4rem;
+	}
+	.fa-check {
+		color: $check-color;
+	}
+
+	.fa-minus {
+		color: $minus-color;
+	}
+
+	&__btn {
+		margin-top: 1.5em;
+		padding: 0.5em 3.5em;
+		background: none;
+		border: none;
+		border-radius: 8px;
+		font-size: 1.6rem;
+		cursor: pointer;
+		box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
+		transition: background-color 0.3s;
+		&:hover {
+			background-color: $check-btn;
+		}
+		&--central {
+			background-color: lime;
+			&:hover {
+				background-color: $primary-check-btn;
+			}
 		}
 	}
 }
@@ -206,9 +294,10 @@ img {
 	justify-content: center;
 	text-align: center;
 	padding-bottom: 2em;
-	.nav-logo, img {
+	.nav-logo,
+	img {
 		width: 150px;
-        margin: 20px 0;
+		margin: 20px 0;
 	}
 }
 
@@ -231,8 +320,61 @@ img {
 	font-size: 1.2rem;
 }
 
-
 //MEDIA
+
+@media (min-width: 576px) {
+	.panel-buttons {
+		flex-direction: row;
+	}
+
+	.footer-end {
+		font-size: 1.8rem;
+	}
+}
+
+@media (min-width: 768px) {
+	.hero-img__title {
+		height: 50vh;
+		p {
+			font-size: 2rem;
+		}
+	}
+	.offers-cards {
+		flex-direction: row;
+	}
+	.popup {
+		top: 45vh;
+		left: 10vw;
+		right: 10vw;
+		bottom: 45vh;
+	}
+	.section-list {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: 1fr 1fr;
+		margin: 0 5em;
+		text-align: start;
+		&__one {
+			grid-row: 1/2;
+			grid-column: 1/4;
+		}
+
+		&__two {
+			grid-row: 2/3;
+			grid-column: 1/2;
+		}
+
+		&__three {
+			grid-row: 2/3;
+			grid-column: 2/3;
+		}
+
+		&__four {
+			grid-row: 2/3;
+			grid-column: 3/4;
+		}
+	}
+}
 
 @media (min-width: 992px) {
 	.nav-mobile {
@@ -245,7 +387,11 @@ img {
 	}
 	.hero-img {
 		&__header {
-			background-image: url('/dist/img/hero-img.jpg');
+			height: 80vh;
+			background-image: url('/dist/img/hero-img-christening-big.jpg');
+		}
+		&__title {
+			background-image: url('/dist/img/love-pixabay-big.jpg');
 		}
 	}
 	.aboutus-info {
@@ -253,6 +399,37 @@ img {
 		justify-content: space-between;
 		&__img {
 			width: 50%;
+		}
+	}
+	.popup {
+		left: 25vw;
+		right: 25vw;
+	}
+	.section-list {
+		display: grid;
+		grid-template-columns: 3fr 1fr 1fr 1fr;
+		grid-template-rows: 1fr;
+		margin: 0;
+		padding-top: 2em;
+		&__one {
+			grid-row: 1/3;
+			grid-column: 1/2;
+			text-align: center;
+		}
+
+		&__two {
+			grid-row: 1/2;
+			grid-column: 2/3;
+		}
+
+		&__three {
+			grid-row: 1/2;
+			grid-column: 3/4;
+		}
+
+		&__four {
+			grid-row: 1/2;
+			grid-column: 4/5;
 		}
 	}
 }
