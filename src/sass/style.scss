@@ -147,12 +147,12 @@ img {
 	z-index: 0;
 	&__header {
 		height: 60vh;
-		background-image: url('/dist/img/hero-img-christening-small.jpg');
+		background-image: url('dist/img/hero-img-christening-small.jpg');
 	}
 	&__title {
 		margin-top: 4em;
 		height: 35vh;
-		background-image: url('/dist/img/love-pixabay-small.jpg');
+		background-image: url('dist/img/love-pixabay-small.jpg');
 		background-attachment: fixed;
 	}
 	&__shadow {
@@ -388,10 +388,10 @@ img {
 	.hero-img {
 		&__header {
 			height: 80vh;
-			background-image: url('/dist/img/hero-img-christening-big.jpg');
+			background-image: url('dist/img/hero-img-christening-big.jpg');
 		}
 		&__title {
-			background-image: url('/dist/img/love-pixabay-big.jpg');
+			background-image: url('dist/img/love-pixabay-big.jpg');
 		}
 	}
 	.aboutus-info {
