@@ -26,9 +26,11 @@ const handleNav = () => {
 const changeIcon = () => {
 	if (navMobile.classList.contains('nav-mobile__items--active')) {
 		iconBtn.classList.remove('fa-solid', 'fa-bars')
+		burgerBtn.style.transform = 'rotate(180deg)'
 		iconBtn.classList.add('fa-solid', 'fa-xmark')
 	} else {
 		iconBtn.classList.remove('fa-solid', 'fa-xmark')
+		burgerBtn.style.transform = 'rotate(-180deg)'
 		iconBtn.classList.add('fa-solid', 'fa-bars')
 		body.style.overflow = 'auto'
 	}

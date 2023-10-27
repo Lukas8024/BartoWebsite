@@ -93,15 +93,15 @@ img {
 		left: 0;
 		right: 0;
 		bottom: 10vh;
-		margin: 0 2em;
+		margin: 0 2.5em;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
 		border-radius: 10px;
 		z-index: 50;
-		background-color: $second-color;
-		transform: translateX(-120%);
+		background-color: $primary-color;
+		transform: translateX(-140%);
 		transition: transform 0.5s;
 		&--active {
 			transform: translateX(0);
@@ -230,7 +230,7 @@ img {
 	border: 1px;
 	box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
 	border-radius: 8px;
-	& h3 {
+	h3 {
 		font-size: 2.4rem;
 		font-weight: normal;
 	}
@@ -239,13 +239,9 @@ img {
 		width: 100%;
 		background-position: center;
 		background-size: cover;
-		height: 400px;
+		border-radius: 8px;
+		max-height: 400px;
 	}
-	// & .price {
-	// 	padding: 0.5em;
-	// 	font-size: 3.7rem;
-	// 	font-weight: bold;
-	// }
 	&__options {
 		line-height: 3rem;
 		list-style: none;
