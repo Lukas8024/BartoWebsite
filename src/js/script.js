@@ -5,6 +5,9 @@ const allNavItems = document.querySelectorAll('.nav-mobile__item')
 const footerYear = document.querySelector('.footer__year')
 const body = document.querySelector('body')
 
+const cardBtns = document.querySelectorAll('.offer-card__btn')
+
+
 let section = document.querySelectorAll('.section-scroll')
 let navLinks = document.querySelectorAll('.nav-desktop__item')
 
@@ -35,6 +38,15 @@ const changeIcon = () => {
 		body.style.overflow = 'auto'
 	}
 }
+
+cardBtns.forEach(button => {
+	button.addEventListener('click', event => {
+
+		const clickedButton = event.target;
+		const cardText = clickedButton.previousElementSibling.firstElementChild
+		cardText.classList.toggle('offer-card__text--active')
+	});
+  });
 
 const handleCurrentYear = () => {
 	const year = new Date().getFullYear()
