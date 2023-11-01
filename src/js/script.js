@@ -5,11 +5,8 @@ const allNavItems = document.querySelectorAll('.nav-mobile__item')
 const footerYear = document.querySelector('.footer__year')
 const body = document.querySelector('body')
 
+const cardsText = document.querySelectorAll('.offer-card__text')
 const cardBtns = document.querySelectorAll('.offer-card__btn')
-
-
-let section = document.querySelectorAll('.section-scroll')
-let navLinks = document.querySelectorAll('.nav-desktop__item')
 
 const handleNav = () => {
 	navMobile.classList.toggle('nav-mobile__items--active')
@@ -39,14 +36,43 @@ const changeIcon = () => {
 	}
 }
 
+const clearText = () => {
+	cardsText.forEach(el => {
+		if (el.classList.contains('offer-card__text--active')) {
+			el.classList.remove('offer-card__text--active')
+		}
+	})
+}
+
 cardBtns.forEach(button => {
 	button.addEventListener('click', event => {
-
-		const clickedButton = event.target;
+		const clickedButton = event.target
 		const cardText = clickedButton.previousElementSibling.firstElementChild
-		cardText.classList.toggle('offer-card__text--active')
-	});
-  });
+
+		if (cardText.classList.contains('offer-card__text--active')) {
+			clearText()
+		} else {
+			clearText()
+			cardText.classList.add('offer-card__text--active')
+		}
+	})
+})
+
+// let sectionCard = document.querySelectorAll('.section-scroll')
+
+// window.onscroll = () => {
+// 	sectionCard.forEach(sec => {
+// 		let top = window.scrollY
+// 		let id = sec.getAttribute('id')
+
+// 		console.log(top)
+// 		console.log(id)
+
+// 		if (id !== 'offers') {
+// 			clearText()
+// 		}
+// 	})
+// }
 
 const handleCurrentYear = () => {
 	const year = new Date().getFullYear()
