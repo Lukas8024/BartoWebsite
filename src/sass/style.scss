@@ -232,6 +232,7 @@ img {
 	// height: 700px;
 	padding: 2em 1em;
 	border: 1px;
+	background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
 	box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
 	border-radius: 8px;
 	h3 {
@@ -258,7 +259,6 @@ img {
 		background-size: cover;
 		border-radius: 8px;
 		overflow: hidden;
-		// max-height: 400px;
 	}
 	&__text {
 		display: flex;
@@ -283,19 +283,6 @@ img {
 		}
 	}
 
-	// &__options {
-	// 	line-height: 3rem;
-	// 	list-style: none;
-	// 	font-size: 1.4rem;
-	// }
-	// .fa-check {
-	// 	color: $check-color;
-	// }
-
-	// .fa-minus {
-	// 	color: $minus-color;
-	// }
-
 	&__btn {
 		// margin-top: 1.5em;
 		padding: 0.5em 3.5em;
@@ -304,13 +291,14 @@ img {
 		border-radius: 8px;
 		font-size: 1.6rem;
 		cursor: pointer;
+		background-color: $primary-color;
 		box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
 		transition: background-color 0.3s;
 		&:hover {
 			background-color: $check-btn;
 		}
 		&--central {
-			background-color: rgb(120, 83, 120);
+			background-color: rgb(179, 143, 179);
 			&:hover {
 				background-color: rgb(146, 119, 146);
 			}
