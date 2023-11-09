@@ -40,6 +40,7 @@ const clearText = () => {
 	cardsText.forEach(el => {
 		if (el.classList.contains('offer-card__text--active')) {
 			el.classList.remove('offer-card__text--active')
+			cardBtns.forEach(button => {button.textContent = '>>>'})
 		}
 	})
 }
@@ -54,25 +55,10 @@ cardBtns.forEach(button => {
 		} else {
 			clearText()
 			cardText.classList.add('offer-card__text--active')
+			button.textContent = '<<<'
 		}
 	})
 })
-
-// let sectionCard = document.querySelectorAll('.section-scroll')
-
-// window.onscroll = () => {
-// 	sectionCard.forEach(sec => {
-// 		let top = window.scrollY
-// 		let id = sec.getAttribute('id')
-
-// 		console.log(top)
-// 		console.log(id)
-
-// 		if (id !== 'offers') {
-// 			clearText()
-// 		}
-// 	})
-// }
 
 const handleCurrentYear = () => {
 	const year = new Date().getFullYear()
